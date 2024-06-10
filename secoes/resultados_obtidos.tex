@@ -1,17 +1,25 @@
 \section{Resultados Obtidos}
 
+% 3 GRÁFICOS CADA UM COM 3 LINHAS
+% BUBBLE VERMELHO
+
+
 \vspace{.5cm}
+
+
+% Gráfico do vetor crescente
+\subsection{Vetor crescente}
+
 \begin{center}
+
 \begin{tikzpicture}
 \begin{axis}[
     scale =1.5,
-    title={Comparação por leitura},
+    title={Comparação entre algoritmos de ordenação com vetor crescente},
     xlabel={Tamanho do Vetor},
-    ylabel={Contador de Leitura},
+    ylabel={Utilização do vetor},
     legend pos=north west,
     ymajorgrids=true,
-    xmin=0, % Define o limite inferior do eixo x
-    xmax=5000, % Define o limite superior do eixo x
     grid style=dashed,
 ]
 
@@ -19,19 +27,19 @@
     color=blue,
     mark=square,
     ]
-    table [x=Tamanho, y=BubbleSort, col sep=tab] {leitura.dat};
+    table [x=Tamanho, y=BubbleSort, col sep=space] {data/vetor_crescente.dat};
     \addlegendentry{BubbleSort}
 \addplot[
     color=red,
     mark=*,
     ]
-    table [x=Tamanho, y=InsertionSort, col sep=tab] {leitura.dat};
+    table [x=Tamanho, y=InsertionSort, col sep=space] {data/vetor_crescente.dat};
     \addlegendentry{InsertionSort}
 \addplot[
     color=black,
     mark=triangle,
     ]
-    table [x=Tamanho, y=SelectionSort, col sep=tab] {leitura.dat};
+    table [x=Tamanho, y=SelectionSort, col sep=space] {data/vetor_crescente.dat};
     \addlegendentry{SelectionSort}
 
 \end{axis}
@@ -39,40 +47,78 @@
 
 \end{center}
 
+\subsection{Vetor aleatório}
 \begin{center}
 
 \begin{tikzpicture}
 \begin{axis}[
-    scale=1.5,
-    title={Comparação por escrita},
+    scale =1.5,
+    title={Comparação entre algoritmos de ordenação com vetor aleatório},
     xlabel={Tamanho do Vetor},
-    ylabel={Contador de Escrita},
+    ylabel={Utilização do vetor},
     legend pos=north west,
     ymajorgrids=true,
     grid style=dashed,
 ]
+
 \addplot[
     color=blue,
     mark=square,
     ]
-    table [x=Tamanho, y=BubbleSort, col sep=tab] {escrita.dat};
+    table [x=Tamanho, y=BubbleSort, col sep=space] {data/vetor_aleatorio.dat};
     \addlegendentry{BubbleSort}
 \addplot[
     color=red,
     mark=*,
     ]
-    table [x=Tamanho, y=InsertionSort, col sep=tab] {escrita.dat};
+    table [x=Tamanho, y=InsertionSort, col sep=space] {data/vetor_aleatorio.dat};
     \addlegendentry{InsertionSort}
 \addplot[
     color=black,
     mark=triangle,
     ]
-    table [x=Tamanho, y=SelectionSort, col sep=tab] {escrita.dat};
+    table [x=Tamanho, y=SelectionSort, col sep=space] {data/vetor_aleatorio.dat};
     \addlegendentry{SelectionSort}
 
 \end{axis}
 \end{tikzpicture}
 
-
 \end{center}
 
+\subsection{Vetor decrescente}
+\begin{center}
+
+\begin{tikzpicture}
+\begin{axis}[
+    scale =1.5,
+    title={Comparação entre algoritmos de ordenação com vetor decrescente},
+    xlabel={Tamanho do Vetor},
+    ylabel={Utilização do vetor},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    table [x=Tamanho, y=BubbleSort, col sep=space] {data/vetor_decrescente.dat};
+    \addlegendentry{BubbleSort}
+\addplot[
+    color=red,
+    mark=*,
+    ]
+    table [x=Tamanho, y=InsertionSort, col sep=space] {data/vetor_decrescente.dat};
+    \addlegendentry{InsertionSort}
+\addplot[
+    color=black,
+    mark=triangle,
+    ]
+    table [x=Tamanho, y=SelectionSort, col sep=space] {data/vetor_decrescente.dat};
+    \addlegendentry{SelectionSort}
+
+\end{axis}
+\end{tikzpicture}
+
+\end{center}
