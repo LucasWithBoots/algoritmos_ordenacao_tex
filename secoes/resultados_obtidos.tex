@@ -1,0 +1,78 @@
+\section{Resultados Obtidos}
+
+\vspace{.5cm}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    scale =1.5,
+    title={Comparação por leitura},
+    xlabel={Tamanho do Vetor},
+    ylabel={Contador de Leitura},
+    legend pos=north west,
+    ymajorgrids=true,
+    xmin=0, % Define o limite inferior do eixo x
+    xmax=5000, % Define o limite superior do eixo x
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    table [x=Tamanho, y=BubbleSort, col sep=tab] {leitura.dat};
+    \addlegendentry{BubbleSort}
+\addplot[
+    color=red,
+    mark=*,
+    ]
+    table [x=Tamanho, y=InsertionSort, col sep=tab] {leitura.dat};
+    \addlegendentry{InsertionSort}
+\addplot[
+    color=black,
+    mark=triangle,
+    ]
+    table [x=Tamanho, y=SelectionSort, col sep=tab] {leitura.dat};
+    \addlegendentry{SelectionSort}
+
+\end{axis}
+\end{tikzpicture}
+
+\end{center}
+
+\begin{center}
+
+\begin{tikzpicture}
+\begin{axis}[
+    scale=1.5,
+    title={Comparação por escrita},
+    xlabel={Tamanho do Vetor},
+    ylabel={Contador de Escrita},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    table [x=Tamanho, y=BubbleSort, col sep=tab] {escrita.dat};
+    \addlegendentry{BubbleSort}
+\addplot[
+    color=red,
+    mark=*,
+    ]
+    table [x=Tamanho, y=InsertionSort, col sep=tab] {escrita.dat};
+    \addlegendentry{InsertionSort}
+\addplot[
+    color=black,
+    mark=triangle,
+    ]
+    table [x=Tamanho, y=SelectionSort, col sep=tab] {escrita.dat};
+    \addlegendentry{SelectionSort}
+
+\end{axis}
+\end{tikzpicture}
+
+
+\end{center}
+
