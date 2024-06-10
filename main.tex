@@ -1,63 +1,59 @@
-\documentclass[12pt]{article}
-
-\usepackage{pgfplotstable}
-\usepackage{pgfplots}
-
-\usepackage[portuguese]{babel}
-\usepackage{biblatex}
-\addbibresource{bibliografia.bib}
-
-\usepackage[a4paper, margin=1in]{geometry} 
-\usepackage{amsmath,amsthm,amssymb,scrextend}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-
-\newcommand{\cont}{\subseteq}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{amsmath}
-\usepackage[mathscr]{euscript}
-\let\euscr\mathscr \let\mathscr\relax% just so we can load this and rsfs
-\usepackage[scr]{rsfso}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{multicol}
-\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
-citecolor=blue, urlcolor=blue]{hyperref}
-
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{minted}
-
-\usepackage{tcolorbox}
-
-\DeclareMathOperator{\arcsec}{arcsec}
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\arccsc}{arccsc}
-\newcommand{\ddx}{\frac{d}{dx}}
-\newcommand{\dfdx}{\frac{df}{dx}}
-\newcommand{\ddxp}[1]{\frac{d}{dx}\left( #1 \right)}
-\newcommand{\dydx}{\frac{dy}{dx}}
-\let\ds\displaystyle
-\newcommand{\intx}[1]{\int #1 \, dx}
-\newcommand{\intt}[1]{\int #1 \, dt}
-\newcommand{\defint}[3]{\int_{#1}^{#2} #3 \, dx}
-\newcommand{\imp}{\Rightarrow}
-\newcommand{\un}{\cup}
-\newcommand{\inter}{\cap}
-\newcommand{\ps}{\mathscr{P}}
-\newcommand{\set}[1]{\left\{ #1 \right\}}
-\newtheorem*{sol}{Solution}
-\newtheorem*{claim}{Claim}
-\newtheorem{problem}{Problem}
-\begin{document}
- 
-% EVERYTHING ABOVE THIS LINE IS JUST PREABLE, NO NEED TO MESS WITH IT.__________________________________________________________________________________________
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Diaz Essay
+% LaTeX Template
+% Version 2.0 (13/1/19)
 %
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Nicolas Diaz (nsdiaz@uc.cl)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\lhead{AEDs I – Prática}
-\chead{Lucas Carrijo Ferrari}
-\rhead{\today}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{diazessay} % Font size (can be 10pt, 11pt or 12pt)
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Comparação entre os Métodos de Ordenação} \\ {\Large\itshape Relatório do desempenho do Bubble, Insertion e Selection Sort em contextos com vetores}} % Title and subtitle
+
+\author{\textbf{Lucas Carrijo Ferrari} \\ \textit{Universidade Federal de Alfenas}} % Author and institution
+
+\date{\today} % Date, use \date{} for no date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+\begin{abstract}
+O objetivo deste projeto é compreender as diferenças entre métodos de ordenação não recursivos, aprender a comparar algoritmos de ordenação e relatar os experimentos realizados.
+\end{abstract}
+
+\hspace*{3.6mm}\textit{Keywords:} bubblesort, insertionsort, selectionsort, ordenação, vetores % Keywords
+
+\vspace{30pt} % Vertical whitespace between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
 
 \input{secoes/introducao}
 \input{secoes/referencial_teorico}
@@ -65,7 +61,14 @@ citecolor=blue, urlcolor=blue]{hyperref}
 \input{secoes/resultados_obtidos}
 \input{secoes/conclusao}
 
-\newpage
-\printbibliography
- 
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{unsrt}
+
+\bibliography{bibliografia.bib}
+
+%----------------------------------------------------------------------------------------
+
 \end{document}
