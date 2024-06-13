@@ -4,12 +4,12 @@ Após a análise dos dados dispostos, podemos chegar a algumas conclusões acerc
 
 \subsection{Bubble Sort}
 
-O Bubble Sort, conhecido por sua simplicidade, apresentou o pior desempenho, especialmente para vetores aleatórios e decrescentes. Em vetores aleatórios, o número de operações cresce quadraticamente, chegando a 19.998.000.000 para um vetor de tamanho 100000. Para vetores crescentes, o desempenho é linear, necessitando de apenas 199.998 operações para o mesmo tamanho, refletindo seu melhor caso.
+O Bubble Sort, conhecido por sua simplicidade, teve o seu melhor rendimento apenas para vetores crescentes, enquanto para vetores aleatórios e decrescentes não obteve um desempenho tão bom, sendo o algoritmo com mais leituras e escritas.
 
 \subsection{Insertion Sort}
 
-O Insertion Sort teve desempenho razoável em vetores aleatórios, melhor que o Bubble Sort, mas ainda com crescimento rápido no número de operações (74.956.944 para um vetor de tamanho 10000). Em vetores crescentes, seu desempenho foi excelente, com operações lineares (199.998 para um vetor de tamanho 100000). No entanto, apresentou o pior desempenho para vetores decrescentes, com 15.000.049.998 operações para um vetor de tamanho 100000.
+O Insertion Sort teve desempenho razoável em vetores aleatórios e decrescentes, melhor que o Bubble Sort, mas ainda com crescimento rápido no número de operações. Em vetores crescentes, seu desempenho foi excelente.
 
 \subsection{Selection Sort}
 
-O Selection Sort, embora mais eficiente que o Bubble Sort, não teve um desempenho tão bom quanto o Insertion Sort. Para vetores aleatórios, o número de operações chegou a 50.104.154 para um vetor de tamanho 10000. Em vetores crescentes, manteve um comportamento quadrático (50.004.999 operações para um vetor de tamanho 100000). Para vetores decrescentes, teve desempenho intermediário com 75.014.999 operações para um vetor de tamanho 100000.
+O Selection Sort, embora mais eficiente que o Bubble Sort, não teve um desempenho tão bom, sendo o algoritmo com maior número de operações em vetores crescentes, entretanto obteve o melhor desempenho em vetores aleatórios e decrescentes.
